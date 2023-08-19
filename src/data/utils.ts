@@ -41,19 +41,19 @@ export const getWordCount = (s: string) => {
 export const getCharacterCount = (s: string) => {
     const regex = /[a-zA-Z0-9]/g;
     // @ts-ignore
-    return s.length > 0 ? s.match(regex).length || 0 : 0;
+    return s.length > 0 ? s.match(regex)?.length || 0 : 0;
 };
 
 export const getSentenceCount = (s: string) => {
     const regex = /[^ \r\n][^!?\.\r\n]+[\w!?\.]+/g;
     // @ts-ignore
-    return s.length > 0 ? s.match(regex).length || 0 : 0;
+    return s.length > 0 ? s.match(regex)?.length || 0 : 0;
 };
 
 export const getParagraphCount = (s: string) => {
     const regex = /[\r\n]+/g;
     // @ts-ignore
-    return s.length > 0 ? s.match(regex).length || 0 : 0;
+    return s.length > 0 ? s.match(regex)?.length || 0 : 0;
 };
 
 export const getPronounsCount = (s:string) => {
